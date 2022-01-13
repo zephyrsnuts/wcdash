@@ -25,7 +25,7 @@ from
 		scc.cldr_date = uwf.wo_crt_utc_dts :: date
 	where
 		1 = 1
-		and cast(uwf.wo_crt_utc_dts as date) > '2020-01-01'
+		and cast(uwf.wo_crt_utc_dts as date) > '2019-01-01'
 		and uwf.asst_id is not null
 		and uwf.wo_nbr is not null
 --		and (lower(ucf.usdm_case_type) not in ('care'))

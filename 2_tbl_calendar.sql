@@ -2,7 +2,7 @@
 create or replace view ws_svc_gsa_bi.vw_ani_6208_cal_wc
 as (
 	select
-	scc.cldr_date AS calendar_date
+	scc.cldr_date::date AS calendar_date
 	,scc.cldr_day_val AS calendar_day
 	,scc.fisc_day_rltv AS day_lag
 	,scc.weekday_flag AS weekday_flag

@@ -234,6 +234,6 @@ from WS_SVC_GSA_BI.USDM_WO_FACT uwf
 	inner join ws_svc_gsa_bi.vw_ani_6208_filters_wc vafw 
 		on vafw.wo_wid = uwf.wo_wid 
 where 1=1
-and uwf.wo_crt_utc_dts > '2021-08-01'
+and uwf.wo_crt_utc_dts::date > '2021-08-01'
 --and uwf.asst_id = '1BHZYQ2'--'BSJGBT2'--'B6C95B3'--'1BHZYQ2'
 )

@@ -91,7 +91,9 @@ ttc_ttr as (
 )
 select distinct
 	cft.*
-	,ttc.*
+	,ttc.ttc_age
+	,ttc.TTC_NUMERATOR_SECNDS
+	,ttc.TTC_Denom
 	,ucf.case_wid
 	,ucf.case_crt_dts 
 	,coalesce(ucf.case_cmplt_dts, ucf.case_closd_dts, ucf.rptg_rslvd_dts) as case_closed_dts
@@ -140,3 +142,4 @@ from
 		on cft.case_wid_1 = ucf.case_wid
 	left join ttc_ttr ttc
 		on ttc.case_wid2 = ucf.case_wid
+--where ucf.del_flg = 0
